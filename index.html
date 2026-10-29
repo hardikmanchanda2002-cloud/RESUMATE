@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ResuMate — AI Resume & Job Matcher</title>
+<meta name="description" content="Compare your resume with a job description, identify matching skills, and find gaps to improve your application.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">R</span><span>Resu<span class="gradient-text">Mate</span></span></a>
+  <nav><a href="#how">How it works</a><a href="#matcher">Matcher</a><a class="nav-cta" href="#matcher">Try it free <span>↗</span></a></nav>
+</header>
+<main>
+<section class="hero">
+  <div class="eyebrow"><span class="pulse"></span> YOUR CAREER, IN FOCUS</div>
+  <h1>Make your resume<br>meet its <span class="gradient-text">next opportunity.</span></h1>
+  <p class="hero-copy">Understand how your experience lines up with a role. Find the strengths to highlight and the skill gaps to work on — before you apply.</p>
+  <div class="hero-actions"><a class="button primary" href="#matcher">Analyze my resume <span>→</span></a><a class="text-link" href="#how">See how it works ↓</a></div>
+  <div class="trust-row"><span>✦ Skill-based comparison</span><span>✦ Actionable feedback</span><span>✦ You stay in control</span></div>
+  <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orb"><span>✦</span></div><div class="floating-card card-score"><small>ROLE ALIGNMENT</small><strong>Skill match</strong><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="floating-card card-skill"><span class="dot cyan"></span> Skills mapped <b>✓</b></div><div class="floating-card card-gap"><span class="dot pink"></span> Growth areas <b>↗</b></div></div>
+</section>
+<section class="matcher-section" id="matcher">
+  <div class="section-heading"><div><div class="eyebrow">THE RESUMATE MATCHER</div><h2>Know your fit.<br><span class="muted">Improve your next move.</span></h2></div><p>Upload your resume or paste its text, then add the job description. We’ll compare skills and keywords and give you a practical summary.</p></div>
+  <div class="workspace">
+    <div class="input-panel">
+      <div class="panel-head"><span class="step">01</span><div><h3>Your resume</h3><p>Upload a PDF or TXT, or paste text below.</p></div></div>
+      <label class="upload-zone" for="resumeFile"><span class="upload-icon">↑</span><strong>Drop your resume here</strong><span>or <u>browse files</u> · PDF / TXT</span><input id="resumeFile" type="file" accept=".pdf,.txt,.md"></label>
+      <div class="file-status" id="fileStatus">No file selected</div>
+      <label class="field-label" for="resumeText">Resume text</label><textarea id="resumeText" rows="7" placeholder="Paste your resume content here — experience, education, projects, skills…"></textarea>
+      <div class="panel-head job-head"><span class="step purple">02</span><div><h3>Target job</h3><p>Paste the role description you want to match.</p></div></div>
+      <label class="field-label" for="jobText">Job description</label><textarea id="jobText" rows="7" placeholder="Paste the job description, responsibilities, and required skills…"></textarea>
+      <div class="actions"><button class="button primary wide" id="analyzeBtn">Analyze match <span>→</span></button><button class="button ghost" id="demoBtn">Load demo</button></div>
+      <p class="privacy-note">🔒 Your resume is processed for this analysis. Don’t include sensitive personal information you don’t need to share.</p>
+    </div>
+    <div class="results-panel" id="resultsPanel">
+      <div class="empty-state" id="emptyState"><div class="empty-icon">✧</div><h3>Your insights will appear here</h3><p>Add a resume and job description to see matching skills, missing keywords, and practical suggestions.</p><div class="empty-checks"><span>✓ Skill overlap</span><span>✓ Gap analysis</span><span>✓ Next steps</span></div></div>
+      <div id="results" hidden></div>
+    </div>
+  </div>
+</section>
+<section class="how-section" id="how"><div class="eyebrow">SIMPLE BY DESIGN</div><h2>Three steps to a <span class="gradient-text">stronger application.</span></h2><div class="steps-grid"><article><span class="step-big">01</span><h3>Bring your resume</h3><p>Upload a PDF or paste your resume text to get started.</p></article><article><span class="step-big">02</span><h3>Choose a role</h3><p>Use the real job description so feedback is role-specific.</p></article><article><span class="step-big">03</span><h3>Act on your insights</h3><p>Review overlaps and gaps, then tailor your application honestly.</p></article></div></section>
+<section class="note-section"><span class="note-icon">✦</span><div><h3>Built to guide, not decide.</h3><p>ResuMate is an aid for job seekers, not a hiring decision-maker. A match score is an indicative keyword/skill overlap, not a prediction of interview success.</p></div></section>
+</main>
+<footer><a class="brand" href="#"><span class="brand-mark">R</span><span>Resu<span class="gradient-text">Mate</span></span></a><span>Team Hack Titans · SPARK 2 SCALE 2026</span><span>Think clearly. Apply confidently.</span></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="/app.js"></script>
+</body></html>
